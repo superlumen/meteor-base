@@ -19,7 +19,7 @@ Package.onUse(function(api) {
   api.imply('coffeescript');
 
   // Use and imply node's native server side asserts
-  api.use('superlumen:assert');
+  api.use('superlumen:assert@0.0.1');
   api.imply('superlumen:assert');
 
   // Export a global App namespace
