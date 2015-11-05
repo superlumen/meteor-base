@@ -30,7 +30,7 @@ App.Schemas.Meta =
 
   createdBy:
     type: String
-    regEx: SimpleSchema.RegEx.Id
+    regEx: /^[23456789ABCDEFGHJKLMNPQRSTWXYZabcdefghijkmnopqrstuvwxyz]{17}$/
     optional: true
     autoValue: ->
       unless @userId?
