@@ -1,6 +1,6 @@
 Package.describe({
   name: 'superlumen:base',
-  version: '0.0.2',
+  version: '0.0.3',
   // Brief, one-line summary of the package.
   summary: 'Superlumen base package',
   // URL to the Git repository containing the source code for this package.
@@ -12,6 +12,20 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2');
+
+  // Load and imply the model stack
+  api.use([
+    'mongo',
+    'aldeed:simple-schema@1.5.3',
+    'aldeed:collection2@2.8.0',
+    'aldeed:autoform@5.8.1',
+  ]);
+  api.imply([
+    'mongo',
+    'aldeed:simple-schema',
+    'aldeed:collection2',
+    'aldeed:autoform',
+  ]);
 
   // We want coffeescript here because we're using it
   api.use('coffeescript');
