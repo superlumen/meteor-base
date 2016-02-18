@@ -39,10 +39,16 @@ Package.onUse(function(api) {
   // Export a global App namespace
   api.export('App');
 
+  // Export a global utility / helper namespace
+  api.export('u');
+
   // This instantiates the A namespace object
   api.addFiles('scope.js');
 
   // Our meta schema which gets merged into all other schemas
   api.addFiles('meta.schema.both.coffee');
+
+  // Add our helpers file
+  api.addFiles('mongo.helpers.both.coffee');
 
 });
