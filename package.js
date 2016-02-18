@@ -32,6 +32,10 @@ Package.onUse(function(api) {
   // And we want it everywhere else because it's freakin awesome
   api.imply('coffeescript');
 
+  // We want EJSON everywhere for `EJSON.clone()` and friends
+  api.use('ejson');
+  api.imply('ejson');
+
   // Use and imply node's native server side asserts
   api.use('superlumen:assert@0.0.1');
   api.imply('superlumen:assert');
